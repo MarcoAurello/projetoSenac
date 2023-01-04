@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header.ejs') %>
+<link rel="stylesheet" type="text/css"  href="css/bg.css" />
+<style>
+    body {
+    background-color: #082767;
+    
+  background-image: url('img/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: 100%;
+  
+  
+
+  }
+</style>
+
+<body >
+    <%- include('partials/navbar.ejs') %>
+    
+    <div id="teste"> 
+    <div class="container">
+        <center>
+        <div class="card1" id="cadastro">
+            <div class="card-header">
+                <h1>Oficina Bolo Revery</h1>
+                <h3>Duração 1h</h3>
+                <h3>Aprenda e venda ainda hoje</h3>
+                
+                
+            </div>
+
+                <div class="card-bodycadastro">
+                    
+                    <form method="POST" action="/salvarcadastro"  name="formulario">
+                    
+                    <input type="text" placeholder="Nome"  class="form-control" name="nome"><p><p>
+                    <input type="email" placeholder="Email"  class="form-control" name="email"><p></p>
+                    <input type="tel" placeholder="Telefone (whatsApp)"  onkeydown="return mascaraTelefone(event)"
+                     class="form-control" name="tel"><p></p>
+                    <input type="password" placeholder="Crie uma Senha"  class="form-control" name="senha"><p></p>
+                    
+                        <button  class="btn btn-primary"  disabled="disabled">Assistir Videos</button>
+                       
+                    </center>        
+                        
+
+                    
+        
+        
+                </form>   
+                </div>
+            
+        </div>  
+    </div>
+        </div  
+</body>
+
+
+<script>
+    //abilitar botao depois do preenchimento
+function checkInputs(inputs) {
+  var filled = true;
+  
+  inputs.forEach(function(input) {
+      
+    if(input.value === "") {
+        filled = false;
+    }
+  
+  });
+  
+  return filled;
+  
+}
+var inputs = document.querySelectorAll("input");
+var button = document.querySelector("button");
+inputs.forEach(function(input) {
+    
+  input.addEventListener("keyup", function() {
+    if(checkInputs(inputs)) {
+      button.disabled = false;
+    } else {
+      button.disabled = true;
+    }
+  });
+});
+
+//telefone
+function mascaraTelefone(event) {
+        let tecla = event.key;
+        let telefone = event.target.value.replace(/\D+/g, "");
+
+        if (/^[0-9]$/i.test(tecla)) {
+            telefone = telefone + tecla;
+            let tamanho = telefone.length;
+
+            if (tamanho >= 12) {
+                return false;
+            }
+            
+            if (tamanho > 10) {
+                telefone = telefone.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+            } else if (tamanho > 5) {
+                telefone = telefone.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+            } else if (tamanho > 2) {
+                telefone = telefone.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+            } else {
+                telefone = telefone.replace(/^(\d*)/, "($1");
+            }
+
+            event.target.value = telefone;
+        }
+
+        if (!["Backspace", "Delete"].includes(tecla)) {
+            return false;
+        }
+    }
+
+
+</script>
+<%- include('partials/footer.ejs') %>
+</html>

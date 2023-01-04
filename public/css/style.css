@@ -1,0 +1,306 @@
+
+
+
+
+#cadastro{
+
+    margin-top: 20px;
+}
+
+h1{
+    color: rgb(245, 122, 8);
+    text-shadow: -1px 0 black, 0 1px black,
+      1px 0 black, 0 -1px black;
+    
+}
+
+h3{
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black,
+      1px 0 black, 0 -1px black;
+    
+}
+
+
+
+.card-headerindex  h1{
+    color: darkorange;
+
+}
+
+
+
+.titulo{
+    
+    font-size: 25px;
+    float:inherit   ;
+}
+.card-bodydest{
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
+    margin-top: 20px;
+   
+   
+    
+}
+
+
+
+
+
+.textocursodest{
+    padding: 10px 50px 50px 10px;
+    display: inline-block;
+    
+    display: contents;
+    float: right;
+   
+    
+}
+.textocursodest img{
+    float: inline-start;
+    
+
+}
+
+
+
+
+.product-card-home-info {
+    padding: 0px;
+    padding-bottom: 2px 0px 0px 10px !important;
+    margin: 20px 20px 0;
+    height: 100%;
+    max-width: 370px;
+    width: 100%;
+    display: inline-block;
+    text-align: justify;
+    
+
+
+}
+
+.destaque {
+    
+    padding-bottom: 10px 10px 10px 10px !important;
+    margin: 20px 20px 0;
+    height: 100%;
+    max-width: 770px;
+    width: 100%;
+    text-align: justify;
+    background-image: linear-gradient(#ffae00, rgb(255, 238, 0));
+    border-radius: 20px;
+    -webkit-box-shadow: 9px 7px 5px rgba(235, 14, 14, 0.77);
+	-moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
+	box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
+   
+
+
+}
+
+.destaquecoment {
+    
+    padding-bottom: 10px 10px 10px 10px !important;
+    padding: 10px 10px ;
+    margin: 20px 20px 0;
+    height: 100%;
+    margin-left: 10px;
+    margin: 10px;
+    width: 100%;
+    text-align: justify;
+    background-image: linear-gradient(#cce2f3, rgb(179, 212, 225));
+    border-radius: 05px;
+    -webkit-box-shadow: 1px 1px 1px rgba(235, 14, 14, 0.77);
+	-moz-box-shadow:    1px 1px 1px rgba(50, 50, 50, 0.77);
+	box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.77);
+   
+
+
+}
+
+
+.textocurso{
+    padding: 10px 10px 10px 10px;
+   
+    
+
+}
+
+.sair{
+   
+   color: #ffffff;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+   
+   
+}
+.sair:hover{
+   
+    color: #f7ba12;
+     
+    
+    
+ }
+
+
+.card{
+    
+    width: 240px;
+    background-image: linear-gradient(#f4f009, rgb(236, 171, 20));
+    float: left;
+    height: 500px;
+    border-radius: 20px;
+    border-style: ridge;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -webkit-box-shadow: 3px 3px 3px rgba(36, 22, 235, 0.77);
+	-moz-box-shadow:    3px 3px 8px rgba(36, 22, 235, 0.77);
+	box-shadow:         3px 8px 3px rgba(36, 22, 235, 0.77);
+    
+}
+
+.cardcursos{
+    
+    width: 240px;
+    background-image: linear-gradient(#8bd7f5, rgb(216, 243, 247));
+    float: left;
+    height: 430px;
+    border-radius: 20px;
+    border-style: ridge;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -webkit-box-shadow: 3px 3px 3px rgba(2, 1, 19, 0.77);
+	-moz-box-shadow:    3px 3px 3px rgba(2, 1, 19, 0.77);
+	box-shadow:         3px 3px 3px rgba(2, 1, 19, 0.77);
+    
+}
+
+
+img{
+    border-radius: 10px;
+
+}
+
+
+
+.cardcursos img{
+    width: "100px";
+     height: "250px";
+     display: block;
+     margin-bottom: auto;
+     
+   
+}
+
+.card img{
+    width: "100px";
+     height: "250px";
+     display: block;
+     margin-bottom: auto;
+     
+   
+}
+
+html {
+    min-height: 100%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+ }
+
+.card-bodycadastro{
+    background-color: rgb(238, 178, 15);
+    border-radius: 20px;
+    width: 400px;
+    
+    
+    border-radius: 20 px;
+    display: flex;
+flex-direction: row;
+justify-content: center;
+margin: 5px 5px 5px 5px;
+padding: 5px 5px 5px 5px;
+-webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+-moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
+box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
+
+}
+
+
+#carrossel {
+    position: absolute;
+    width: 95%;
+    height: 600px;
+    margin-left: 2%;
+   
+    overflow: hidden;
+}
+
+#container {
+    position: absolute;
+    width: auto;
+    height: 100%;
+   
+    display: inline-flex;
+    transition: 0.2s ease-in-out;
+}
+
+#container #item {
+    position: relative;
+    margin: 0 7px;
+    width: 250px;
+    height: 100%;
+
+    z-index: 2;
+}
+
+
+#btnleft {
+    position: absolute;
+    background-image: linear-gradient(#f88808, rgb(250, 164, 5));
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 300px;
+    margin-top: 5%;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 10px;
+}
+
+#btnright {
+    position: absolute;
+    margin-top: 5%;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 300px;
+    background-image: linear-gradient(#f88808, rgb(250, 164, 5));
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 10px;
+}
+#btnright:hover {
+    opacity: 0.7;
+   
+}
+#btnleft:hover {
+    opacity: 0.7;
+   
+}
+
+#container #limitador {
+    position: absolute;
+    margin: 0 7px;
+    width: 150px;
+    height: 100%;
+    opacity: 0;
+    right: 0;
+    z-index: 1;
+   
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include('partials/header.ejs') %>
+<%- include('partials/navbar1.ejs') %>
+
+    <body><div class="card1" >
+        
+        
+        <center>
+            <div class=""  >
+             
+                <table >
+
+                <tr><td>
+                    <a href="/cursos">
+                        <button  class="btn btn-warning" >todos </button>
+                    </a>
+                </td>
+                    <td>
+                        <a href="/Saude">
+                            <button  class="btn btn-warning" >Saude e Beleza </button>
+                        </a>
+                        
+                    
+                        
+                    </td>
+                    <td>
+                        <a href="/tecnologia">
+                            <button  class="btn btn-warning" >Tecnologia e Negocios </button>
+                        </a>
+
+                    </td>
+                    <td>
+                        <a href="/gastronomia">
+                            <button  class="btn btn-warning" >Gastronomia</button>
+                        </a>
+
+                    </td>
+                </tr>
+            </table>
+       
+                     
+            
+            </div>
+       
+        
+     
+
+            <div class="container">
+                
+
+                <div class="card1">
+                    <hr>
+                    
+                   <table >
+                    <tr>
+                        <td>
+                            <iframe width="600" height="360" src="<%= cursoEscolhido.link  %>">
+                                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                                clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+
+                        </td>
+                        <td></td><td></td>
+                        <td>
+                            <div id="textoCursos">
+                                <h2><%= cursoEscolhido.nome %></h2>
+                                <b> Descrição:</b>
+                                <%= cursoEscolhido.descrição %><br>
+                                    <b> Duração:</b> 
+                                    <%= cursoEscolhido.Duracao %><br>
+                                        <b>Categoria:</b> 
+                                        
+                                        <%= cursoEscolhido.Categoria %><br>
+                                        <hr>
+                                       
+                    <form method="POST" action="/responder">
+                        <label><b> Digite sua duvida ou comentário</b></label>
+                        <textarea placeholder="Digite aqui..." class="form-control" name="corpo" 
+                        rows="5" cols="10"></textarea><br>
+                        <input type="hidden" name="curso" value="<%= cursoEscolhido.id %>">
+
+                        <a href="/responder">
+                            <button  class="btn btn-warning" >Enviar comentario</button>
+                        </a>
+                        
+                    </form>
+                                                        
+                            </div>
+                            
+                        </td>
+                    </tr>   
+                   </table>                    
+                </div>
+                <hr>
+                <h1>Comentarios:</h1>
+                <div id="coment">
+                <% comentarios.forEach(comentario =>{ %>
+                    <div class=""   class="">
+                        <div class="destaquecoment">
+                             <%= comentario.corpo %></b>
+                        </div>   
+                <% }) %>
+            </div>
+                <div class="card-body">
+                    <a href="/cursos">
+                        <button class="btn btn-warning">Galeria de Videos</button>
+                    </a>
+        
+                </div>
+            </div>
+    </body>
+   
+
+
+
+    <%- include('partials/footer.ejs') %>
+
+    
+
+</html>

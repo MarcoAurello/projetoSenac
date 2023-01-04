@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header.ejs') %>
+<body>
+    <%- include('partials/navbar1.ejs') %>
+    
+    <div class="container">
+        <div class="card1" >
+           
+            
+            <center>
+                <div class=""  >
+                 
+                    <table >
+
+                    <tr>
+                        <td>
+                            <a href="/cursos">
+                                <button  class="btn btn-warning" >todos </button>
+                            </a>
+                        </td>
+
+                            
+                        
+                        <td>
+                            <a href="/Saude">
+                                <button  class="btn btn-warning" >Saude e Beleza </button>
+                            </a>
+                            
+                        
+                            
+                        </td>
+                        <td>
+                            <a href="/tecnologia">
+                                <button  class="btn btn-warning" >Tecnologia e Negocios </button>
+                            </a>
+
+                        </td>
+                        <td>
+                            <a href="/gastronomia">
+                                <button  class="btn btn-warning" >Gastronomia</button>
+                            </a>
+
+                        </td>
+                    </tr>
+                </table>
+           
+                         
+                
+                </div>
+                
+                
+            
+            <hr>
+
+               
+
+                
+
+            
+              
+        </div>  
+    </div>
+    
+    <div id='carrossel'>
+
+        <button type='button' id='btnleft'><img src=""><b ><</b></button>
+
+        <div id='container'>
+
+            <% cursos.forEach(curso =>{ %>
+            <div id='item'>
+                
+                    
+                    <center>
+                    <div class="cardcursos"   class="product-card-home-info">
+                        
+                        
+                        <div class="card-body">
+                            <b> <%= curso.nome %></b>
+                            
+                            <img src="img/<%= curso.Img%>.jpg" width="170px" height="150px" >
+                            <hr>
+                        </div>
+                        <div class="textocurso" >
+                            
+                             <b> Duração:</b> <%= curso.Duracao  %><br>
+                             <b> Categoria:</b> <%= curso.Categoria  %><br>
+                                 
+                        <p>
+                                   <center>
+                                        <a href="/cursoEscolhido/<%= curso.id %>">
+                                            <button  class="btn btn-primary" >Assistir </button><p></p>
+                                        </a></center>
+                                       
+                                        <input type="hidden" name="logado" value="5" >
+
+                                    
+                         </div>
+                        
+                         
+                                
+                        
+                    </div>
+                    
+                </center> 
+                    
+                
+                
+
+
+            </div>
+
+            <% }) %>
+
+
+            <div id='limitador'>Limitador</div>
+
+        </div>
+
+        <button type='button' id='btnright'><b >></b></button>
+
+    </div>
+          
+</body>
+<script>
+    //variaveis de contagem da direção
+
+var num = 250;
+var num2 = 250;
+
+//slide do botão direito
+
+var btnRight = document.getElementById('btnright');
+
+btnRight.addEventListener('click', () => {
+
+var limi = document.getElementById('limitador').getBoundingClientRect().left;
+
+var limit = Math.round(limi);
+
+var er = document.getElementById('btnright').getBoundingClientRect().left;
+
+var ref = Math.round(er);
+
+var slideContainer = document.getElementById('container');
+
+var carrossel = document.getElementById('carrossel');
+
+
+if (limit > ref) {
+
+    slideContainer.style.transform = 'translateX(-' + num + 'px)';
+
+    num = num + 250;
+
+    num2 = num2 - 250;
+
+} else {
+
+    var stoped = ref * slideContainer.clientWidth / carrossel.clientWidth - carrossel.clientWidth + 100;
+
+    var stopedRound = Mtah.round(stoped);
+
+    slideContainer.style.transform = 'translateX(-' + stopedRound + 'px)';
+
+
+}
+
+
+});
+
+
+//slide botão esquerdo
+
+var btnLeft = document.getElementById('btnleft');
+
+btnLeft.addEventListener('click', () => {
+
+
+var limi = document.getElementById('limitador').getBoundingClientRect().left;
+
+var limit = Math.round(limi);
+
+var er = document.getElementById('btnleft').getBoundingClientRect().left;
+
+var ref = Math.round(er);
+
+var slideContainer = document.getElementById('container');
+
+var carrossel = document.getElementById('carrsossel');
+
+var slide = slideContainer.getBoundingClientRect().left;
+
+if (slide < ref) {
+
+    slideContainer.style.transform = 'translateX(' + num2 + 'px)';
+
+    num = num - 250;
+    num2 = num2 + 250;
+
+} else {
+
+    slideContainer.style.transform = 'translateX(0)';
+
+    num = 250;
+
+}
+
+
+});
+</script>

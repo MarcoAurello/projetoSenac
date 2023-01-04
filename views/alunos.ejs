@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header.ejs') %>
+<body>
+    <%- include('partials/navbar1.ejs') %>
+    
+    <div class="container">
+        <div class="card1" >
+           
+            
+            <center>
+                <div class=""  >
+                 
+                    <table >
+
+                    <tr>
+                        <td>
+                            <a href="/cursos">
+                                <button  class="btn btn-warning" >todos </button>
+                            </a>
+                        </td>
+
+                            
+                        
+                        <td>
+                            <a href="/Saude">
+                                <button  class="btn btn-warning" >Saude e Beleza </button>
+                            </a>
+                            
+                        
+                            
+                        </td>
+                        <td>
+                            <a href="/tecnologia">
+                                <button  class="btn btn-warning" >Tecnologia e Negocios </button>
+                            </a>
+
+                        </td>
+                        <td>
+                            <a href="/gastronomia">
+                                <button  class="btn btn-warning" >Gastronomia</button>
+                            </a>
+
+                        </td>
+                    </tr>
+                </table>
+           
+                         
+                
+                </div>
+                
+                
+            
+            <hr>
+
+               
+
+                
+
+            
+              
+        </div>  
+   
+        <form>
+            <input type="button" class="btn btn-danger" 
+             value="imprimir lista de alunos" onClick="window.print()"/>
+            </form>
+            <p></p>
+    <table border="1">
+        <tr style="background-color: cornsilk;">
+            <td>nome</td><td>email</td><td>telefone</td><td>senha</td>
+
+        </tr>
+        <% alunos.forEach(aluno =>{ %>   
+        <tr>
+                <td> <%= aluno.nome %></td>
+                <td> <%= aluno.email %></td>
+                <td> <%= aluno.tel %></td>
+                <td> <%= aluno.senha %></td>
+                
+                
+            </tr>
+        
+            <% }) %>
+
+            </table>
+                
+                    
+                    
+        </div>
+    
+            
+
+
+            
+
+        </div>
+
+       
+
+    </div>
+          
+</body>
